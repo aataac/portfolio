@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
-class MainController extends Controller
+use App\Projet;
+class ProjetsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,8 @@ class MainController extends Controller
      */
     public function index()
     {
-        return view('welcome');
+        $projets = Projet::all();
+        return view('welcome',compact('projets'));
     }
 
     /**
@@ -34,7 +35,15 @@ class MainController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'titre' => 'required|min:2',
+            'description' => 'required|min:2'
+        ]);
+        $projet = new Projet();
+        $projet->titre = $request->titre;
+        $projet->description = $request->description;
+        $projet->save();
+        return redirect()->route('home');
     }
 
     /**
@@ -56,7 +65,8 @@ class MainController extends Controller
      */
     public function edit($id)
     {
-        //
+         $projet = Projet::find($id);
+        return view('projet.edit', compact('projet'));
     }
 
     /**

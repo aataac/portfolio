@@ -11,9 +11,9 @@
 |
 */
 
+Route::get('/', 'ProjetsController@index');
 
-
-Route::get('/', 'MainController@index')->name('home');
+Route::get('/home', 'ProjetsController@index')->name('home');
 
 Route::get('/projets', function () {
     return view('projets.projets');
@@ -21,11 +21,16 @@ Route::get('/projets', function () {
 
 
 Route::get('/projets/create', [
-    'uses' => 'MainController@create',
+    'uses' => 'ProjetsController@create',
     'as' => 'projets.create'
 ]);
 
-Route::get('/projets/store', [
-    'uses' => 'MainController@store',
+Route::post('/projets/store', [
+    'uses' => 'ProjetsController@store',
     'as' => 'projets.store'
+]);
+
+Route::post('/projets/edit/{id}', [
+    'uses' => 'ProjetsController@edit',
+    'as' => 'projets.edit'
 ]);

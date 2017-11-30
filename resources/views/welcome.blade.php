@@ -92,6 +92,15 @@
 		</div>
 	</div>
 
+	@foreach($projets as $projet)
+	<div class="col-md-4">
+		<h2>
+			<a href="{{ route('projets.edit', ['id'=> $projet->id])}}">{{ $projet->titre }}</a>
+		</h2>
+		<p>{{ $projet->description }}</p>
+	</div>
+	@endforeach
+
 </section>
 
 <section id="blog-section">

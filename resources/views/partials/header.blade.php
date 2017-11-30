@@ -4,30 +4,30 @@
 
 		<div id="logo-left">
 			<h1 id="site-name">
-				<a href="http://">Cordillera</a>
+				<a href="">MorinDev.com</a>
 			</h1>
-			<span>Just another MageeWP Sites site</span>
-			<a href="{{route('projets.create')}}">Insérez une nouveau post</a>
+			<span>A developer organization</span>
+			<a href="{{route('projets.create')}}">Insérer un nouveau projet</a>
 		</div>
 		<nav id="menus-right">
 			<ul>
 				<li class="menu-item">
-					<a href="http://">Home</a>
+					<a href="">Home</a>
 				</li>
 				<li class="menu-item">
-					<a href="http://">Blog</a>
+					<a href="">Blog</a>
 				</li>
 				<li class="menu-item">
-					<a href="http://">About</a>
+					<a href="">About</a>
 				</li>
 				<li class="menu-item">
-					<a href="http://">Pages</a>
+					<a href="">Pages</a>
 				</li>
 				<li class="menu-item">
-					<a href="http://">Tarifs</a>
+					<a href="">Tarifs</a>
 				</li>
 				<li class="menu-item">
-					<a href="http://">Text</a>
+					<a href="">Text</a>
 				</li>
 			</ul>
 		</nav>
