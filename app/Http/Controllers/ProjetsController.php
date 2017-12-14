@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Projet;
+use Auth;
 class ProjetsController extends Controller
 {
     /**
@@ -43,7 +44,7 @@ class ProjetsController extends Controller
         $projet->titre = $request->titre;
         $projet->description = $request->description;
         $projet->save();
-        return redirect()->route('home');
+        return redirect()->route('index');
     }
 
     /**
@@ -54,7 +55,8 @@ class ProjetsController extends Controller
      */
     public function show($id)
     {
-        //
+        $projets = Projet::find($id);
+        return view('projets.projets',compact('projets'));
     }
 
     /**
@@ -66,7 +68,7 @@ class ProjetsController extends Controller
     public function edit($id)
     {
          $projet = Projet::find($id);
-        return view('projet.edit', compact('projet'));
+        return view('projets.edit', compact('projet'));
     }
 
     /**
@@ -78,7 +80,16 @@ class ProjetsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+     $request->validate([
+           'titre' => 'required|min:2',
+           'description' => 'required|min:2'
+       ]);
+
+       $projet = Projet::find($id);
+       $projet->titre = $request->titre;
+       $projet->description = $request->description;
+       $projet->save();
+       return redirect()->route('index');
     }
 
     /**
@@ -89,6 +100,16 @@ class ProjetsController extends Controller
      */
     public function destroy($id)
     {
-        //
+       $projet = Projet::find($id);
+       $projet->delete();
+       return redirect()->route('index'); 
     }
+
+    public function getSignOut()
+    {
+        Auth::logout();
+        return redirect()->route('index');
+    }
+
 }
+

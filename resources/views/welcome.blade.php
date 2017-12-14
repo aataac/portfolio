@@ -8,7 +8,7 @@
 @endsection @section('content')
 <section id="container-menu-bar">
 
-	<div id="section-2">
+	<div id="section-2" class="container">
 		<div class="row">
 			<div class="col-md-3">
 				<div class="feature-box">
@@ -89,17 +89,21 @@
 			<div class="col-sm-6 col-md-3">
 				<img src="https://demo.mageewp.com/cordillera/wp-content/uploads/sites/5/2014/08/portfolio-img-4-480x360.jpg" alt="">
 			</div>
+
+			@foreach($projets as $projet)
+			<div class="col-md-3">
+				<h2>
+					<a href="{{ route('projets', ['id'=> $projet->id])}}">{{ $projet->titre }}</a>
+					<a href="{{ route('projets.edit', ['id'=> $projet->id])}}">
+						<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+					</a>
+				</h2>
+				<p>{{ $projet->description }}</p>
+			</div>
+			@endforeach
+
 		</div>
 	</div>
-
-	@foreach($projets as $projet)
-	<div class="col-md-4">
-		<h2>
-			<a href="{{ route('projets.edit', ['id'=> $projet->id])}}">{{ $projet->titre }}</a>
-		</h2>
-		<p>{{ $projet->description }}</p>
-	</div>
-	@endforeach
 
 </section>
 
