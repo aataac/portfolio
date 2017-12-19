@@ -30,9 +30,9 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>Admin</b>Panel',
 
-    'logo_mini' => '<b>A</b>LT',
+    'logo_mini' => '<b>A</b>P',
 
     /*
     |--------------------------------------------------------------------------
@@ -113,6 +113,7 @@ return [
             'text' => 'Dashboard',
             'url'  => 'admin/dashboard',
             'icon' => 'dashboard',
+            'icon_color' => 'yellow',
         ],
         [
             'text' => 'Mailbox',
@@ -126,8 +127,9 @@ return [
         ],
         [
             'text' => 'Projects',
-            'url'  => 'admin/projects',
+            'url'  => 'admin/projets',
             'icon' => 'file-powerpoint-o',
+            'icon_color' => 'blue',
         ],
         [
             'text'        => 'Pages',
@@ -146,6 +148,11 @@ return [
             'text' => 'Change Password',
             'url'  => 'admin/settings',
             'icon' => 'lock',
+        ],
+        [
+            'text' => 'Exit',
+            'url'  => 'admin/exit',
+            'icon' => 'sign-out',
         ],
         [
             'text'    => 'Multilevel',

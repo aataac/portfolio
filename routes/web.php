@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'ProjetsController@index');
+Route::get('/', 'ProjetsController@index')->name('site_url');
 
 Route::get('/home', 'ProjetsController@index')->name('home');
 
@@ -52,12 +52,19 @@ Route::post('/projets/update/{id}', [
         'uses' => 'ProjetsController@destroy',
         'as' => 'projets.delete'
     ]);   
-Auth::routes();
 
 Route::get('/index', 'ProjetsController@index')->name('index');
 
-Route::view('/admin', 'admin')->name('admin');
+Route::view('/admin', 'admin_panel.admin')->name('admin');
+
+Route::view('/admin/dashboard', 'admin_panel.admin')->name('admin_dashboard');
+
+Route::get('/admin/projets', 'ProjetsController@admin_index' )->name('admin_projets');
+
+Route::get('/admin/projets/create', 'ProjetsController@admin_projets_create' )->name('admin_projets_create');
+
+Route::get('/admin/projets/edit/{id}', 'ProjetsController@edit' )->name('admin_projets_edit');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::view('/home', 'admin_panel.admin')->name('home');

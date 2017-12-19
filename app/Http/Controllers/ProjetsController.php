@@ -19,6 +19,17 @@ class ProjetsController extends Controller
     }
 
     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function admin_index()
+    {
+        $projets = Projet::all();
+        return view('admin_panel.admin_projets',compact('projets'));
+    }
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
@@ -26,6 +37,16 @@ class ProjetsController extends Controller
     public function create()
     {
         return view ('projets.create');
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function admin_projets_create()
+    {
+        return view ('admin_panel.admin_projets_create');
     }
 
     /**
@@ -44,7 +65,7 @@ class ProjetsController extends Controller
         $projet->titre = $request->titre;
         $projet->description = $request->description;
         $projet->save();
-        return redirect()->route('index');
+        return redirect()->route('admin_projets');
     }
 
     /**
@@ -68,7 +89,7 @@ class ProjetsController extends Controller
     public function edit($id)
     {
          $projet = Projet::find($id);
-        return view('projets.edit', compact('projet'));
+        return view('admin_panel.admin_projets_edit', compact('projet'));
     }
 
     /**
