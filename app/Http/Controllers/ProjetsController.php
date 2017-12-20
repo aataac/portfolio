@@ -110,7 +110,7 @@ class ProjetsController extends Controller
        $projet->titre = $request->titre;
        $projet->description = $request->description;
        $projet->save();
-       return redirect()->route('index');
+       return redirect()->route('admin_projets');
     }
 
     /**
@@ -123,7 +123,7 @@ class ProjetsController extends Controller
     {
        $projet = Projet::find($id);
        $projet->delete();
-       return redirect()->route('index'); 
+       return redirect()->route('admin_projets'); 
     }
 
     public function getSignOut()

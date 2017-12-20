@@ -9,18 +9,23 @@
 
 			<div><a href="{{route('admin_projets_create')}}">Insérer un nouveau projet</a></div>
 
+			<div class="row">
 
 @foreach($projets as $projet)
-			<div class="col-md-3">
-				<h2>
-					<a href="{{ route('projets', ['id'=> $projet->id])}}">{{ $projet->titre }}</a>
-					<a href="{{ route('admin_projets_edit', ['id'=> $projet->id])}}">
-						<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-					</a>
-				</h2>
-				<p>{{ $projet->description }}</p>
-			</div>
+
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="..." alt="{{ $projet->titre }}">
+      <div class="caption">
+        <h3>{{ $projet->titre }}</h3>
+        <p>{{ $projet->description }}</p>
+        <p><a href="{{ route('projets', ['id'=> $projet->id])}}" class="btn btn-primary" role="button" target="_blank">View</a> <a href="{{ route('admin_projets_edit', ['id'=> $projet->id])}}" class="btn btn-default" role="button">Edit</a></p>
+      </div>
+    </div>
+  </div>
 			@endforeach
+			</div>
+
 
 @stop @section('css')
 <link rel="stylesheet" href="/css/admin_custom.css"> @stop @section('js')

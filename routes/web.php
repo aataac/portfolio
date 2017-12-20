@@ -54,6 +54,7 @@ Route::post('/projets/update/{id}', [
     ]);   
 
 Route::get('/index', 'ProjetsController@index')->name('index');
+Route::middleware(['auth'])->group(function () {
 
 Route::view('/admin', 'admin_panel.admin')->name('admin');
 
@@ -65,6 +66,10 @@ Route::get('/admin/projets/create', 'ProjetsController@admin_projets_create' )->
 
 Route::get('/admin/projets/edit/{id}', 'ProjetsController@edit' )->name('admin_projets_edit');
 
+Route::view('/home', 'admin_panel.admin')->name('home');
+
+});
+
 Auth::routes();
 
-Route::view('/home', 'admin_panel.admin')->name('home');
+
