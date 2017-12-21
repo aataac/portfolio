@@ -130,12 +130,7 @@ return [
             'url'  => 'admin/projets',
             'icon' => 'file-powerpoint-o',
             'icon_color' => 'blue',
-        ],
-        [
-            'text'        => 'Pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'file',
-            'label'       => 4,
+            'label'       => null,
             'label_color' => 'success',
         ],
         'ACCOUNT SETTINGS',
@@ -146,12 +141,12 @@ return [
         ],
         [
             'text' => 'Change Password',
-            'url'  => 'admin/settings',
+            'url'  => 'admin/password-change',
             'icon' => 'lock',
         ],
         [
             'text' => 'Exit',
-            'url'  => 'admin/exit',
+            'url'  => '/user/sign-out',
             'icon' => 'sign-out',
         ],
         [

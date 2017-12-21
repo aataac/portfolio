@@ -1,5 +1,5 @@
 {{-- resources/views/admin/dashboard.blade.php --}} @extends('adminlte::page') @section('title', 'Dashboard') @section('content_header')
-<h1>Dashboard <small>Control panel</small></h1>
+<h1><small><a href="{{url()->previous()}}">Back</a></small> Dashboard <small>Control panel</small></h1>
 <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li class="active">Dashboard</li>

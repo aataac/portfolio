@@ -68,6 +68,10 @@ Route::get('/admin/projets/edit/{id}', 'ProjetsController@edit' )->name('admin_p
 
 Route::view('/home', 'admin_panel.admin')->name('home');
 
+Route::get('/admin/password-change', 'UserController@admin_password_change_page' )->name('admin_password_change_page');
+
+Route::post('/admin/password-changes', 'UserController@admin_password_change' )->name('admin_password_change');
+
 });
 
 Auth::routes();
