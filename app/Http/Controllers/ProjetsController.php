@@ -64,6 +64,9 @@ class ProjetsController extends Controller
         $projet = new Projet();
         $projet->titre = $request->titre;
         $projet->description = $request->description;
+        $projet
+           ->addMediaFromUrl("https://cdn.pixabay.com/photo/2016/06/18/17/42/image-1465348_960_720.jpg")
+           ->toMediaCollection();
         $projet->save();
         return redirect()->route('admin_projets');
     }

@@ -130,13 +130,13 @@ return [
             'url'  => 'admin/projets',
             'icon' => 'file-powerpoint-o',
             'icon_color' => 'blue',
-            'label'       => null,
+            'label'       => 5,
             'label_color' => 'success',
         ],
         'ACCOUNT SETTINGS',
         [
             'text' => 'Profile',
-            'url'  => 'admin/settings',
+            'url'  => '/admin/profile-page',
             'icon' => 'user',
         ],
         [

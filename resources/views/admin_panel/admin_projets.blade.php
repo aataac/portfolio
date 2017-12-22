@@ -15,7 +15,8 @@
 
   <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
-      <img src="..." alt="{{ $projet->titre }}">
+    {{--  {{ dd($projet->getMedia()[0]->getUrl())}}  --}}
+      <img src="{{ $projet->getMedia()[0]->getUrl() }}" alt="{{ $projet->titre }}">
       <div class="caption">
         <h3>{{ $projet->titre }}</h3>
         <p>{{ $projet->description }}</p>

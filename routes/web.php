@@ -72,6 +72,8 @@ Route::get('/admin/password-change', 'UserController@admin_password_change_page'
 
 Route::post('/admin/password-changes', 'UserController@admin_password_change' )->name('admin_password_change');
 
+Route::view('/admin/profile-page', 'admin_panel.admin_profile' )->name('admin_profile_page');
+
 });
 
 Auth::routes();

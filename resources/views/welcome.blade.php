@@ -69,26 +69,14 @@
 	</div>
 </section>
 
-<section id="our-projects">
+{{--  <section id="our-projects">
 	<div class="title-block text-center">
 		<h2 class="module-title">Our Projects</h2>
 		<p class="module-description">Some of our works.</p>
 	</div>
 
-	<div id="portfolios">
-		<div class="row no-padding">
-			<div class="col-sm-6 col-md-3">
-				<img src="https://demo.mageewp.com/cordillera/wp-content/uploads/sites/5/2014/08/portfolio-img-1-480x360.jpg" alt="">
-			</div>
-			<div class="col-sm-6 col-md-3">
-				<img src="https://demo.mageewp.com/cordillera/wp-content/uploads/sites/5/2014/08/portfolio-img-3.jpg" alt="">
-			</div>
-			<div class="col-sm-6 col-md-3">
-				<img src="https://demo.mageewp.com/cordillera/wp-content/uploads/sites/5/2014/08/portfolio-img-2.jpg" alt="">
-			</div>
-			<div class="col-sm-6 col-md-3">
-				<img src="https://demo.mageewp.com/cordillera/wp-content/uploads/sites/5/2014/08/portfolio-img-4-480x360.jpg" alt="">
-			</div>
+
+
 
 			@foreach($projets as $projet)
 			<div class="col-md-3">
@@ -102,17 +90,16 @@
 			</div>
 			@endforeach
 
-		</div>
-	</div>
 
-</section>
+
+</section>  --}}
 
 <section id="blog-section">
 	<div class="container">
 		<div class="row">
 			<div class="title-block text-center">
-				<h2 class="module-title">Blog Articles</h2>
-				<p class="module-description">The latest news.</p>
+				<h2 class="module-title">Our Projects</h2>
+				<p class="module-description">Some of our works.</p>
 			</div>
 
 
