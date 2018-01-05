@@ -69,7 +69,8 @@
 	</div>
 </section>
 
-{{--  <section id="our-projects">
+{{--
+<section id="our-projects">
 	<div class="title-block text-center">
 		<h2 class="module-title">Our Projects</h2>
 		<p class="module-description">Some of our works.</p>
@@ -78,21 +79,21 @@
 
 
 
-			@foreach($projets as $projet)
-			<div class="col-md-3">
-				<h2>
-					<a href="{{ route('projets', ['id'=> $projet->id])}}">{{ $projet->titre }}</a>
-					<a href="{{ route('projets.edit', ['id'=> $projet->id])}}">
-						<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-					</a>
-				</h2>
-				<p>{{ $projet->description }}</p>
-			</div>
-			@endforeach
+	@foreach($projets as $projet)
+	<div class="col-md-3">
+		<h2>
+			<a href="{{ route('projets', ['id'=> $projet->id])}}">{{ $projet->titre }}</a>
+			<a href="{{ route('projets.edit', ['id'=> $projet->id])}}">
+				<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+			</a>
+		</h2>
+		<p>{{ $projet->description }}</p>
+	</div>
+	@endforeach
 
 
 
-</section>  --}}
+</section> --}}
 
 <section id="blog-section">
 	<div class="container">
@@ -169,7 +170,48 @@
 </section>
 
 <section id="bottom-carousel">
-
+	<div id="testimonial-5a4aa5d31caf9" class="carousel slide" data-ride="carousel">
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner" role="listbox">
+			<div class="item next left">
+				<div class="testimonial-box" style="">
+					<div class="testimonial-content">
+						<i class="fa fa-quote-left"></i>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum malesuada odio id ligula sagittis, vitae venenatis erat
+						tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					</div>
+					<div class="testimonial-author-wrapper text-center">
+						<div class="testimonial-author ">
+							<p>Catherine Grace - CEO of Digital W</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="item active left">
+				<div class="testimonial-box" style="">
+					<div class="testimonial-content">
+						<i class="fa fa-quote-left"></i>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum malesuada odio id ligula sagittis, vitae venenatis erat
+						tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					</div>
+					<div class="testimonial-author-wrapper text-center">
+						<div class="testimonial-author ">
+							<p>Katy Geoana - PR of Castiel Trans</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Controls -->
+		<a class="left carousel-control" href="#testimonial-5a4aa5d31caf9" role="button" data-slide="prev">
+			<span class="fa fa-caret-left"></span>
+			<span class="sr-only">Previous</span>
+		</a>
+		<a class="right carousel-control" href="#testimonial-5a4aa5d31caf9" role="button" data-slide="next">
+			<span class="fa fa-caret-right"></span>
+			<span class="sr-only">Next</span>
+		</a>
+	</div>
 </section>
 
 <section id="partners">

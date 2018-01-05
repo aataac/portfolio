@@ -56,7 +56,8 @@ class ProjetsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    { 
+        // dd($request);
         $request->validate([
             'titre' => 'required|min:2',
             'description' => 'required|min:2'
@@ -65,7 +66,7 @@ class ProjetsController extends Controller
         $projet->titre = $request->titre;
         $projet->description = $request->description;
         $projet
-           ->addMediaFromUrl("https://cdn.pixabay.com/photo/2016/06/18/17/42/image-1465348_960_720.jpg")
+           ->addMedia($request->image_uploads)
            ->toMediaCollection();
         $projet->save();
         return redirect()->route('admin_projets');
@@ -112,6 +113,13 @@ class ProjetsController extends Controller
        $projet = Projet::find($id);
        $projet->titre = $request->titre;
        $projet->description = $request->description;
+       if ($request->image_uploads != null){
+           $media_id = $projet->getMedia()[0]->id;
+           $projet->deleteMedia($media_id);
+           $projet
+           ->addMedia($request->image_uploads)
+           ->toMediaCollection();
+        };
        $projet->save();
        return redirect()->route('admin_projets');
     }

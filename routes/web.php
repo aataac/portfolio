@@ -74,6 +74,8 @@ Route::post('/admin/password-changes', 'UserController@admin_password_change' )-
 
 Route::view('/admin/profile-page', 'admin_panel.admin_profile' )->name('admin_profile_page');
 
+// Route::post('/projets/store', 'ProjetsController@store');
+
 });
 
 Auth::routes();
