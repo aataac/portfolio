@@ -7,5 +7,6 @@
 	<p>
 		<label for="description">{{$projets->description}}</label>
 	</p>
+
 </div>
 @endsection

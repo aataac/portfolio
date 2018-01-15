@@ -8,9 +8,7 @@
 	<title>Document</title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
-	<link rel="stylesheet" href="{{ url('css/app.css')}}"> {{--
-	<link rel="stylesheet" href="{{ url('css/bootstrap.css')}}"> --}}
-	<link rel="stylesheet" href="{{ url('css/carousel.css')}}">
+	<link rel="stylesheet" href="{{ url('css/app.css')}}">
 
 </head>
 

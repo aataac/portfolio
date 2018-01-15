@@ -1,8 +1,9 @@
 @extends('layouts.main') @section('header-banner')
+<link rel="stylesheet" href="{{ url('css/carousel.css')}}">
 <section id="head-banner">
 	<p id="ligne-text-1">- WEB DEVELOPMENT - PHOTOGRAPHY - ICON DESIGN -</p>
 	<h1 id="title-big">
-		< <span id="title-big-color">Développeur</span> web /></h1>
+		<span id="title-big-color">Développeur</span> web /></h1>
 	<h2>Nice to Meet You</h2>
 </section>
 @endsection @section('content')
@@ -169,48 +170,61 @@
 
 </section>
 
-<section id="bottom-carousel">
-	<div id="testimonial-5a4aa5d31caf9" class="carousel slide" data-ride="carousel">
-		<!-- Wrapper for slides -->
-		<div class="carousel-inner" role="listbox">
-			<div class="item next left">
-				<div class="testimonial-box" style="">
-					<div class="testimonial-content">
-						<i class="fa fa-quote-left"></i>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum malesuada odio id ligula sagittis, vitae venenatis erat
-						tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					</div>
-					<div class="testimonial-author-wrapper text-center">
-						<div class="testimonial-author ">
-							<p>Catherine Grace - CEO of Digital W</p>
+
+<section id="bottom-carousel" class="home-section home-page-section-five" style="background-image:url('https://demo.mageewp.com/cordillera/wp-content/uploads/sites/5/2015/07/bg-1.jpg');background-repeat:no-repeat;background-position:top center;background-attachment:fixed;padding-top:50px;padding-bottom:50px;">
+	<div class="full-width  container">
+		<div class="row">
+			<div class="col-md-12">
+				<div id="cordillera_testimonial-3" class="widget cordillera_testimonial">
+					<div class="testimonial-wrapper">
+						<div id="testimonial-5a58873b7ba19" class="carousel slide" data-ride="carousel">
+							<!-- Wrapper for slides -->
+							<div class="carousel-inner" role="listbox">
+								<div class="item">
+									<div class="testimonial-box" style="">
+										<div class="testimonial-content">
+											<i class="fa fa-quote-left"></i>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum malesuada odio id ligula sagittis, vitae venenatis erat
+											tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										</div>
+										<div class="testimonial-author-wrapper text-center">
+											<div class="testimonial-author ">
+												<p>Catherine Grace - CEO of Digital W</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="item active">
+									<div class="testimonial-box" style="">
+										<div class="testimonial-content">
+											<i class="fa fa-quote-left"></i>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum malesuada odio id ligula sagittis, vitae venenatis erat
+											tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+										</div>
+										<div class="testimonial-author-wrapper text-center">
+											<div class="testimonial-author ">
+												<p>Katy Geoana - PR of Castiel Trans</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Controls -->
+							<a class="left carousel-control" href="#testimonial-5a58873b7ba19" role="button" data-slide="prev">
+								<span class="fa fa-caret-left"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							<a class="right carousel-control" href="#testimonial-5a58873b7ba19" role="button" data-slide="next">
+								<span class="fa fa-caret-right"></span>
+								<span class="sr-only">Next</span>
+							</a>
 						</div>
 					</div>
-				</div>
-			</div>
-			<div class="item active left">
-				<div class="testimonial-box" style="">
-					<div class="testimonial-content">
-						<i class="fa fa-quote-left"></i>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum malesuada odio id ligula sagittis, vitae venenatis erat
-						tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					</div>
-					<div class="testimonial-author-wrapper text-center">
-						<div class="testimonial-author ">
-							<p>Katy Geoana - PR of Castiel Trans</p>
-						</div>
-					</div>
+					<span class="seperator extralight-border"></span>
 				</div>
 			</div>
 		</div>
-		<!-- Controls -->
-		<a class="left carousel-control" href="#testimonial-5a4aa5d31caf9" role="button" data-slide="prev">
-			<span class="fa fa-caret-left"></span>
-			<span class="sr-only">Previous</span>
-		</a>
-		<a class="right carousel-control" href="#testimonial-5a4aa5d31caf9" role="button" data-slide="next">
-			<span class="fa fa-caret-right"></span>
-			<span class="sr-only">Next</span>
-		</a>
+		<div class="clear"></div>
 	</div>
 </section>
 
