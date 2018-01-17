@@ -3,7 +3,7 @@
 <section id="head-banner">
 	<p id="ligne-text-1">- WEB DEVELOPMENT - PHOTOGRAPHY - ICON DESIGN -</p>
 	<h1 id="title-big">
-		<span id="title-big-color">Développeur</span> web /></h1>
+		< <span id="title-big-color">Développeur</span> web /></h1>
 	<h2>Nice to Meet You</h2>
 </section>
 @endsection @section('content')
