@@ -104,11 +104,12 @@
 				<p class="module-description">Some of our works.</p>
 			</div>
 
+			@foreach ($projets as $k => $projet) @if ($k % 2 == 0)
 
 			<div class="bloglist-box">
 				<div class="row">
 					<div class="col-md-6 float-left">
-						<img src="https://demo.mageewp.com/cordillera/wp-content/uploads/sites/5/2014/08/portfolio-img-2.jpg" alt="">
+						<img src="{{ $projets[0]->getMedia()[0]->getUrl() }}" alt="{{ $projets[0]->titre }}">
 					</div>
 					<div class="col-md-6 float-right">
 						<div class="bloglist-content">
@@ -133,6 +134,8 @@
 					</div>
 				</div>
 			</div>
+
+			@else
 
 			<div class="bloglist-box">
 				<div class="row">
@@ -165,6 +168,12 @@
 					</div>
 				</div>
 			</div>
+
+			@endif @endforeach
+
+
+
+
 		</div>
 	</div>
 

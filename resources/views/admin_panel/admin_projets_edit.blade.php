@@ -26,11 +26,9 @@
 	<form class="" action="{{route('projets.update', ['id' => $projet->id ])}}" method="post" enctype="multipart/form-data">
 		{{csrf_field()}}
 		<div class="form-group">
-			<label for="titre">Titre</label>
 			<input type="text" class="form-control" id="titre" name="titre" placeholder="Titre" value="{{old('titre') ? old('titre') : $projet->titre }}">
 		</div>
 		<div class="form-group">
-			<label for="description">Description</label>
 			<input type="text" class="form-control" id="description" name="description" placeholder="Description" value="{{old('description') ? old('description') : $projet->description }}">
 		</div>
 
