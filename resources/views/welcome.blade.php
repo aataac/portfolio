@@ -109,27 +109,23 @@
 			<div class="bloglist-box">
 				<div class="row">
 					<div class="col-md-6 float-left">
-						<img src="{{ $projets[0]->getMedia()[0]->getUrl() }}" alt="{{ $projets[0]->titre }}">
+						<img src="{{ $projet->getMedia()[0]->getUrl() }}" alt="{{ $projet->titre }}">
 					</div>
 					<div class="col-md-6 float-right">
 						<div class="bloglist-content">
 							<div class="entry-header">
-								Uncategorized
-								<h1 class="entry-title">Markup: Title With Markup</h1>
+								{{$projet->categorie}}
+								<a href="{{ route('projets', ['id'=> $projet->id])}}"><h1 class="entry-title">{{ $projet->titre }}</h1></a>
 								<div class="entry-meta">
 									<div class="entry-date">
 										Sep 11, 2014
 									</div>
-									<div class="entry-comments">
-										No comments yet
-									</div>
 								</div>
 							</div>
 							<div class="entry-summary">
-								Verify that: The post title renders the word “with” in italics and the word “markup” in bold. The post title markup should
-								be removed from the browser window / tab.
+								{{ $projet->description }}
 							</div>
-							<button class="btn-normal line">Read More</button>
+							<a href="{{ route('projets', ['id'=> $projet->id])}}"><button class="btn-normal line">Read More</button></a>
 						</div>
 					</div>
 				</div>
@@ -140,39 +136,31 @@
 			<div class="bloglist-box">
 				<div class="row">
 					<div class="col-md-6 float-right">
-						<img src="https://demo.mageewp.com/cordillera/wp-content/uploads/sites/5/2014/08/portfolio-img-3.jpg">
-						</a>
+						<img src="{{ $projet->getMedia()[0]->getUrl() }}" alt="{{ $projet->titre }}">
 					</div>
 					<div class="col-md-6 float-left">
 						<div class="bloglist-content">
 							<div class="entry-header">
 								<div class="entry-catagory">
-									Uncategorized
+									{{$projet->categorie}}
 								</div>
-								<h1 class="entry-title">Markup: HTML Tags</h1>
+								<a href="{{ route('projets', ['id'=> $projet->id])}}"><h1 class="entry-title">{{ $projet->titre }}</h1></a>
 								<div class="entry-meta">
 									<div class="entry-date">
 										Sep 11, 2014
 									</div>
-									<div class="entry-comments">
-										No comments yet
-									</div>
 								</div>
 							</div>
 							<div class="entry-summary">
-								Multi line blockquote with a cite reference: People think focus means saying yes to the thing you've got to focus on. But
-								that's not what it means at all.
+								{{ $projet->description }}
 							</div>
-							<button class="btn-normal line">Read More</button>
+							<a href="{{ route('projets', ['id'=> $projet->id])}}"><button class="btn-normal line">Read More</button></a>
 						</div>
 					</div>
 				</div>
 			</div>
 
 			@endif @endforeach
-
-
-
 
 		</div>
 	</div>

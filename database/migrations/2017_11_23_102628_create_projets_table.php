@@ -17,6 +17,7 @@ class CreateProjetsTable extends Migration
             $table->increments('id');
             $table->string('titre',100);
             $table->text('description');
+            $table->text('categorie');
             $table->timestamps();
             $table->softDeletes();
         });

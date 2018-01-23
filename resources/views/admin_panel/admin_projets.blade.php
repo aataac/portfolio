@@ -28,6 +28,7 @@
 			<img src="{{ $projet->getMedia()[0]->getUrl() }}" alt="{{ $projet->titre }}">
 			<div class="caption">
 				<h3>{{ $projet->titre }}</h3>
+				<p>{{$projet->categorie}}</p>
 				<p>{{ $projet->description }}</p>
 				<p>
 					<a href="{{ route('projets', ['id'=> $projet->id])}}" class="btn btn-primary" role="button" target="_blank">View</a>

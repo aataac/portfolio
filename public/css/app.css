@@ -8388,7 +8388,7 @@ h6 {
 }
 
 #head-banner {
-  width: 1349px;
+  width: 100%;
   height: 662px;
   background-image: url(/images/head-banner.jpg?5a3f8b6b1f27220b9b9abb77c0273b6c);
   background-size: cover;
@@ -8538,6 +8538,10 @@ header {
 #blog-section .row {
   margin-right: 0;
   margin-left: 0;
+}
+
+.img-page-projet {
+  width: 100%;
 }
 
 .module-title {

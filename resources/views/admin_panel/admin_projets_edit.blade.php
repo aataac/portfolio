@@ -31,6 +31,9 @@
 		<div class="form-group">
 			<input type="text" class="form-control" id="description" name="description" placeholder="Description" value="{{old('description') ? old('description') : $projet->description }}">
 		</div>
+		<div class="form-group">
+			<input type="text" class="form-control" id="categorie" name="categorie" placeholder="Categorie" value="{{old('categorie') ? old('categorie') : $projet->categorie }}">
+		</div>
 
 		<div>
 			<label for="image_uploads">Choose images to upload (PNG, JPG)</label>
